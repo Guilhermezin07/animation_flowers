@@ -1,4 +1,11 @@
-/* Estilos para o corpo e outras configurações */
+body {
+    background-color: #e0e0e0; /* Cor de fundo cinza claro */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .flower {
     position: relative;
