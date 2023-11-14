@@ -1,0 +1,66 @@
+/* Estilos para o corpo e outras configurações */
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: drawFlower 3s forwards;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    opacity: 0;
+    animation: drawCenter 1s forwards 2s;
+}
+
+.petal {
+    width: 30px;
+    height: 60px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transform-origin: bottom;
+    opacity: 0;
+    animation: drawPetal 1s forwards 1s;
+}
+
+@keyframes drawFlower {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes drawCenter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drawPetal {
+    0% {
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+    }
+}
